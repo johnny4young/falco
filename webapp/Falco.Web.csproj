@@ -400,6 +400,7 @@
     <Content Include="Scripts\app.seed.min.js.map">
       <DependentUpon>app.seed.min.js</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\clinicafalco - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
