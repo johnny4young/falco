@@ -364,8 +364,6 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="bundleconfig.json" />
-    <None Include="Properties\PublishProfiles\SmartAdmin - Release.pubxml" />
-    <None Include="Properties\PublishProfiles\SmartAdmin - Debug.pubxml" />
     <Content Include="Scripts\app.config.seed.js" />
     <Content Include="Scripts\app.config.seed.min.js">
       <DependentUpon>app.config.seed.js</DependentUpon>
@@ -416,12 +414,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Helpers\DashRouteHandler.cs" />
+    <Compile Include="App_Helpers\IdentityConfig.cs" />
     <Compile Include="App_Helpers\StringExtensions.cs" />
-    <Compile Include="App_Helpers\UserManager.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Helpers\HtmlHelperExtensions.cs" />
-    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Helpers\Settings.cs" />
     <Compile Include="Areas\Landing\Controllers\LandingController.cs" />
@@ -431,13 +428,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710161530107_InitialCreate.cs" />
-    <Compile Include="Migrations\201710161530107_InitialCreate.Designer.cs">
-      <DependentUpon>201710161530107_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModel.cs" />
+    <Compile Include="Models\UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -445,11 +438,6 @@
       <Project>{3f9ce8b5-4460-4b96-a291-36feb5b581ea}</Project>
       <Name>Falco.WebApi</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710161530107_InitialCreate.resx">
-      <DependentUpon>201710161530107_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

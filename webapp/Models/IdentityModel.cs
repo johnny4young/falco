@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace FalcoMvc.Models
+namespace Falco.Web.Models
 {
     using Microsoft.AspNet.Identity.EntityFramework;
     namespace DbMigrationExample.Models
