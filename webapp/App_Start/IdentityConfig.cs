@@ -6,7 +6,7 @@ namespace FalcoMvc
     {
         public static void RegisterIdentities()
         {
-            // Ensures the default demo user is available to login with
+            // Ensures the Seed of Users and Roles that we need 
             UserManager.Seed();
         }
     }
