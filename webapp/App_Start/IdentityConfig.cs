@@ -1,4 +1,6 @@
-﻿namespace FalcoMvc
+﻿using Falco.WebApi;
+
+namespace FalcoMvc
 {
     public static class IdentityConfig
     {

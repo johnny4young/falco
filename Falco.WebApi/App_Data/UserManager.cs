@@ -6,7 +6,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 #endregion
 
-namespace FalcoMvc
+namespace Falco.WebApi
 {
     public class UserManager : UserManager<IdentityUser>
     {
@@ -44,8 +44,8 @@ namespace FalcoMvc
             var demo = new IdentityUser
             {
                 Id = "6bc8cee0-a03e-430b-9711-420ab0d6a596",
-                Email = "demo@email.com",
-                UserName = "John Doe",
+                Email = "johnny@email.com",
+                UserName = "Johnnny",
                 PasswordHash = "APc6/pVPfTnpG89SRacXjlT+sRz+JQnZROws0WmCA20+axszJnmxbRulHtDXhiYEuQ==",
                 SecurityStamp = "18272ba5-bf6a-48a7-8116-3ac34dbb7f38"
             };
