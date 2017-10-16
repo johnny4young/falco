@@ -417,6 +417,7 @@
   <ItemGroup>
     <Compile Include="App_Helpers\DashRouteHandler.cs" />
     <Compile Include="App_Helpers\StringExtensions.cs" />
+    <Compile Include="App_Helpers\UserManager.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Helpers\HtmlHelperExtensions.cs" />
@@ -430,7 +431,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710161530107_InitialCreate.cs" />
+    <Compile Include="Migrations\201710161530107_InitialCreate.Designer.cs">
+      <DependentUpon>201710161530107_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -438,6 +445,11 @@
       <Project>{3f9ce8b5-4460-4b96-a291-36feb5b581ea}</Project>
       <Name>Falco.WebApi</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201710161530107_InitialCreate.resx">
+      <DependentUpon>201710161530107_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
