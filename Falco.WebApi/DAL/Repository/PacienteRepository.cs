@@ -9,7 +9,7 @@ namespace Falco.WebApi.DAL.Repository
 {
     public class PacienteRepository : GenericRepository<Paciente>
     {
-        public PacienteRepository(DbContext context)
+        public PacienteRepository(ContextModel context)
            : base(context)
        {
 

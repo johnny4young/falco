@@ -9,19 +9,19 @@ namespace Falco.WebApi.DAL.Repository
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        protected DbContext _entities;
+        protected ContextModel _entities;
         protected readonly IDbSet<T> _dbset;
 
-        public GenericRepository(DbContext context)
+        public GenericRepository(ContextModel context)
         {
             _entities = context;
-            _dbset = context.Set<T>();
+            _dbset = _entities.Set<T>();
         }
 
         public virtual IEnumerable<T> GetAll()
         {
 
-            return _dbset.AsEnumerable<T>();
+            return _dbset.ToList<T>();
         }
 
         public IEnumerable<T> FindBy(System.Linq.Expressions.Expression<Func<T, bool>> predicate)

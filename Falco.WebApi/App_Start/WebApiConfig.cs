@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Falco.WebApi.Helper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Web.Http;
 
 namespace Falco.WebApi
@@ -10,7 +12,7 @@ namespace Falco.WebApi
         public static void Register(HttpConfiguration config)
         {
             // Configuración y servicios de API web
-
+            config.Formatters.Add(new BrowserJsonFormatter());
             // Rutas de API web
             config.MapHttpAttributeRoutes();
 
