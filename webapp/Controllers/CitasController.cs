@@ -20,8 +20,24 @@ namespace FalcoMvc.Controllers
         // GET: Citas
         public async Task<ActionResult> Index()
         {
-            var cita = db.Cita.Include(c => c.tipoCita);
-            return View(await cita.ToListAsync());
+            var citas =  db.Cita.Include(c => c.tipoCita).ToList();
+            List<CitaDto> listCita = new List<CitaDto>();
+            foreach (Cita cita in citas)
+            {
+                listCita.Add(new CitaDto
+                {
+                    Id = cita.Id,
+                    Fecha = cita.Fecha,
+                    paciente = cita.paciente,
+                    PacientId = cita.PacientId,
+                    tipoCita = cita.tipoCita,
+                    TipoCitaId = cita.TipoCitaId,
+                    NombrePaciente = db.Paciente.FirstOrDefault(x => x.Id == cita.PacientId).Nombre
+                });
+            }
+
+
+            return View(listCita);
         }
 
         // GET: Citas/Details/5

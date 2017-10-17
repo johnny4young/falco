@@ -207,6 +207,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cita.cs" />
     <Compile Include="DAL\ContextModel.cs" />
+    <Compile Include="DAL\Dto\CitaDto.cs" />
     <Compile Include="Models\Paciente.cs" />
     <Compile Include="Models\TipoCita.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

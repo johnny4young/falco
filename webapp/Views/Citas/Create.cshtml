@@ -55,6 +55,11 @@
                         <input type="button" id="btnCrear" value="Crear" class="btn btn-default" />
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="col-md-offset-4 col-md-8">
+                        <span id="lblError" style="color:red;"></span>
+                    </div>                    
+                </div>
             </div>
            }
 
@@ -72,24 +77,28 @@
         
         $(function () {
             $("#btnCrear").click(function (e) {
-                
+                var pacienteId = $("#PacientId option:selected").val();
+                var fecha      = $("#Fecha").val();
+                var tipoCitaId = $("#TipoCitaId option:selected").val();
                 e.preventDefault();
-                var person = '{Name: "' + $("#txtName").val() + '" }';
+                var cita = '{PacientId: "' + pacienteId + '" , Fecha : "' + fecha + '", TipoCitaId : "' + tipoCitaId + '"  }';
+                console.log("cita", cita);
                 $.ajax({
-                    type: "GET",
-                    url: urlEndpoint + "api/paciente/getall",
-                   // data: person,
-                    contentType: "application/json",
-                    data: {
-                        format: 'json'
-                    },
+                    type: "POST",
+                    url: urlEndpoint + "api/cita/crear",
+                    data: cita,
+                    contentType: "application/json;charset=utf-8",
+                    datatype: 'json',
                     success: function (response) {
-                        console.log(response);
+                        $("#lblError").text("Cita Creada Exitosamente");
+                        window.location = "/citas";
                     },
                     failure: function (response) {
+                        $("#lblError").text(response.responseText);
                         console.log(response.responseText);
                     },
                     error: function (response) {
+                        $("#lblError").text(response.responseText);
                         console.log(response.responseText);
                     }
                 });
