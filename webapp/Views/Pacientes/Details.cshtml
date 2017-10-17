@@ -1,42 +1,51 @@
 ﻿@model Falco.WebApi.Models.Paciente
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles";
 }
 
-<h2>Details</h2>
+<div id="content">
 
-<div>
-    <h4>Paciente</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
+    <div class="row">
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+            <h1 class="page-title txt-color-blueDark">
+                <i class="fa fa-pencil-square-o fa-fw "></i>
+                Pacientes - Detalles
+            </h1>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-xs-12 col-sm-6  col-md-4">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.Nombre)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Edad)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Edad)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Edad)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.Edad)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Sexo)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Sexo)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Sexo)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.Sexo)
+                </dd>
 
-    </dl>
+            </dl>
+
+            <div>
+               @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+                @Html.ActionLink("Regresar", "Index")
+            </div>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
