@@ -5,7 +5,7 @@
 }
 
 @section topright{
-    <span id="extr-page-header-space"> <span class="hidden-mobile">Need an account?</span> <a href="@Url.Action("register", "account")" class="btn btn-danger">Create account</a> </span>
+    <span id="extr-page-header-space"> <a href="@Url.Action("register", "account")" class="btn btn-danger">Crear Cuenta</a> </span>
 }
 
 <div id="content" class="container">
@@ -14,7 +14,7 @@
             <div class="well no-padding">
                 <form action="@Url.Action("login", "account")" method="POST" id="login-form" class="smart-form client-form">
                     <header>
-                        Sign In
+                        Ingresar
                     </header>
                     @Html.HiddenFor(m => m.ReturnUrl)
                     @Html.AntiForgeryToken()
@@ -25,7 +25,7 @@
                             <label class="input">
                                 <i class="icon-append fa fa-user"></i>
                                 <input type="email" name="email" value="johnny@email.com">
-                                <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter email address/username</b>
+                                <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Por favor ingrese email address/username</b>
                             </label>
                         </section>
 
@@ -34,10 +34,10 @@
                             <label class="input">
                                 <i class="icon-append fa fa-lock"></i>
                                 <input type="password" name="password" value="demo">
-                                <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Enter your password</b>
+                                <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Ingrese su password</b>
                             </label>
                             <div class="note">
-                                <a href="@Url.Action("forgotpassword", "account")"><i class="fa fa-frown-o"></i> Forgot password?</a>
+                                <a href="@Url.Action("forgotpassword", "account")"><i class="fa fa-frown-o"></i> Olvidó su password?</a>
                             </div>
                         </section>
 
@@ -45,13 +45,13 @@
                             <label class="checkbox">
                                 <input type="checkbox" name="rememberMe" value="true" checked="checked">
                                 <input type="hidden" name="rememberMe" value="false" />
-                                <i></i>Stay signed in
+                                <i></i>Permanecer conectado
                             </label>
                         </section>
                     </fieldset>
                     <footer>
                         <button type="submit" class="btn btn-primary">
-                            Sign in
+                            Ingresar
                         </button>
                     </footer>
                 </form>

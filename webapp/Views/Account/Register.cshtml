@@ -4,7 +4,7 @@
 }
 
 @section topright{
-    <span id="extr-page-header-space"> <span class="hidden-mobile">Already registered?</span> <a href="@Url.Action("login", "account")" class="btn btn-danger">Sign In</a> </span>
+    <span id="extr-page-header-space"> <a href="@Url.Action("login", "account")" class="btn btn-danger">Ingresar</a> </span>
 }
 
 <div id="content" class="container">
@@ -13,7 +13,7 @@
             <div class="well no-padding">
                 <form action="@Url.Action("register", "account")" method="POST" id="smart-form-register" class="smart-form client-form">
                     <header>
-                        Registration
+                        Registro
                     </header>
                     @Html.AntiForgeryToken()
                     @Html.ValidationBootstrap()
@@ -22,35 +22,35 @@
                             <label class="input">
                                 <i class="icon-append fa fa-user"></i>
                                 <input type="text" name="username" placeholder="Username" id="username" autocomplete="off" value="@Model.Username">
-                                <b class="tooltip tooltip-bottom-right">(Optional) Used to display the profile name on the website</b>
+                                <b class="tooltip tooltip-bottom-right">(Opcional) Usado para mostrar el nombre del perfil en el sitio</b>
                             </label>
                         </section>
                         <section>
                             <label class="input">
                                 <i class="icon-append fa fa-envelope"></i>
                                 <input type="email" name="email" placeholder="Email address" id="email" autocomplete="off" value="@Model.Email">
-                                <b class="tooltip tooltip-bottom-right">Needed to enter the website</b>
+                                <b class="tooltip tooltip-bottom-right">Necesario para ingresar</b>
                             </label>
                         </section>
                         <section>
                             <label class="input">
                                 <i class="icon-append fa fa-envelope"></i>
                                 <input type="email" name="emailConfirm" placeholder="Confirm email address" autocomplete="off" value="@Model.EmailConfirm">
-                                <b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+                                <b class="tooltip tooltip-bottom-right">Necesario para validar</b>
                             </label>
                         </section>
                         <section>
                             <label class="input">
                                 <i class="icon-append fa fa-lock"></i>
                                 <input type="password" name="password" placeholder="Password" id="password" autocomplete="off">
-                                <b class="tooltip tooltip-bottom-right">Don't forget your password</b>
+                                <b class="tooltip tooltip-bottom-right">No olvide su password</b>
                             </label>
                         </section>
                         <section>
                             <label class="input">
                                 <i class="icon-append fa fa-lock"></i>
                                 <input type="password" name="passwordConfirm" placeholder="Confirm password" autocomplete="off">
-                                <b class="tooltip tooltip-bottom-right">Don't forget your password</b>
+                                <b class="tooltip tooltip-bottom-right">No olvide su password</b>
                             </label>
                         </section>
                     </fieldset>
@@ -72,9 +72,8 @@
                                 <label class="select">
                                     <select name="gender">
                                         <option value="0" selected="selected" disabled="disabled">Gender</option>
-                                        <option value="1">Male</option>
-                                        <option value="2">Female</option>
-                                        <option value="3">Prefer not to answer</option>
+                                        <option value="Hombre">Hombre</option>
+                                        <option value="Mujer">Mujer</option>                                      
                                     </select> <i></i>
                                 </label>
                             </section>
@@ -88,13 +87,13 @@
                     </fieldset>
                     <footer>
                         <button type="submit" class="btn btn-primary">
-                            Register
+                            Registrar
                         </button>
                     </footer>
                     <div class="message">
                         <i class="fa fa-check"></i>
                         <p>
-                            Thank you for your registration!
+                            Gracias por registrarse!
                         </p>
                     </div>
                 </form>
@@ -108,7 +107,7 @@
 @section pagespecific{
     <script type="text/javascript">
         // Model i agree button
-        $("#i-agree").click(function () {
+        $("#i-agree").click(function () {w
             var $this = $("#terms");
             if ($this.checked) {
                 $('#myModal').modal('toggle');
@@ -152,10 +151,7 @@
                     },
                     gender: {
                         required: false
-                    },
-                    terms: {
-                        required: true
-                    }
+                    },                   
                 },
 
                 // Messages for form validation
@@ -175,10 +171,7 @@
                     passwordConfirm: {
                         required: 'Please enter your password one more time',
                         equalTo: 'Please enter the same password as above'
-                    },
-                    terms: {
-                        required: 'You must agree with Terms and Conditions'
-                    }
+                    }                    
                 },
 
                 // Do not change code below
