@@ -1,42 +1,51 @@
 ﻿@model Falco.WebApi.Models.Cita
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles";
 }
 
-<h2>Details</h2>
+<div id="content">
 
-<div>
-    <h4>Cita</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.tipoCita.Descripcion)
-        </dt>
+    <div class="row">
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+            <h1 class="page-title txt-color-blueDark">
+                <i class="fa fa-pencil-square-o fa-fw "></i>
+                Citas - Detalles
+            </h1>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-xs-12 col-sm-6  col-md-4">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.tipoCita.Descripcion)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.tipoCita.Descripcion)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.tipoCita.Descripcion)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PacientId)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.PacientId)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.PacientId)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.PacientId)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Fecha)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Fecha)
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Fecha)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.Fecha)
+                </dd>
 
-    </dl>
+            </dl>
+
+            <div>
+                @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+                @Html.ActionLink("Regresar", "Index")
+            </div>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
