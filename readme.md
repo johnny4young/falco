@@ -2,8 +2,7 @@
 
 The App has two Roles: "Admin" and "User".
 
-**Only Admin Role can access to "paciente" view.
-
+**Only Admin Role can access to "paciente" view.**
 login by default:
 
 role admin :   
