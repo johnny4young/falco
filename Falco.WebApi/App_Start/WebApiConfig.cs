@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Falco.WebApi
 {
@@ -11,6 +12,8 @@ namespace Falco.WebApi
     {
         public static void Register(HttpConfiguration config)
         {
+            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
+
             // Configuración y servicios de API web
             config.Formatters.Add(new BrowserJsonFormatter());
             // Rutas de API web

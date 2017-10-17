@@ -4,6 +4,8 @@
     ViewBag.Title = "Crear";
 }
 
+@{ var urlWebApi = FalcoMvc.Settings.UrlWebApi; }
+
 
 <div id="content">
 
@@ -50,7 +52,7 @@
 
                 <div class="form-group">
                     <div class="col-md-offset-4 col-md-8">
-                        <input type="submit" value="Crear" class="btn btn-default" />
+                        <input type="button" id="btnCrear" value="Crear" class="btn btn-default" />
                     </div>
                 </div>
             </div>
@@ -64,4 +66,36 @@
     </div>
 </div>
 
+@section pagespecific {
+    <script type="text/javascript">
+        var urlEndpoint = String('@urlWebApi');
+        
+        $(function () {
+            $("#btnCrear").click(function (e) {
+                
+                e.preventDefault();
+                var person = '{Name: "' + $("#txtName").val() + '" }';
+                $.ajax({
+                    type: "GET",
+                    url: urlEndpoint + "api/paciente/getall",
+                   // data: person,
+                    contentType: "application/json",
+                    data: {
+                        format: 'json'
+                    },
+                    success: function (response) {
+                        console.log(response);
+                    },
+                    failure: function (response) {
+                        console.log(response.responseText);
+                    },
+                    error: function (response) {
+                        console.log(response.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+    
+}
 

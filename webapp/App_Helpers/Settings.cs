@@ -45,6 +45,8 @@ namespace FalcoMvc
         /// </summary>
         public static readonly string CurrentTheme = GetValue<string>("CurrentTheme");
 
+        public static readonly string UrlWebApi = GetValue<string>("UrlWebApi");
+
         /// <summary>
         ///     Gets the entry for the given key and prefix and retrieves its value as the specified type.
         ///     <para>If no prefix is specified the default prefix value ("config") will be used.</para>
