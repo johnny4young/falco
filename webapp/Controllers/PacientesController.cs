@@ -12,6 +12,7 @@ using Falco.WebApi.Models;
 
 namespace FalcoMvc.Controllers
 {
+    [Authorize]
     public class PacientesController : Controller
     {
         private ContextModel db = new ContextModel();

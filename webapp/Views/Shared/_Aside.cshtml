@@ -1,4 +1,15 @@
-﻿    <!-- Left panel : Navigation area -->
+﻿@using Microsoft.AspNet.Identity    
+@using Falco.WebApi.DAL;
+@using Microsoft.AspNet.Identity;
+@using Microsoft.AspNet.Identity.EntityFramework;
+@using System.Web.Mvc;
+@using System.Web.Security;
+
+@{var UserManager = new UserManager<IdentityUser>(new UserStore<IdentityUser>()); }
+@{var currentUser = UserManager.FindByName(User.Identity.Name); }
+@{var isAdmin = UserManager.IsInRole(currentUser.Id, "Admin");}
+
+<!-- Left panel : Navigation area -->
 <!-- Note: This width of the aside area can be adjusted through LESS variables -->
 <aside id="left-panel">
 
@@ -21,17 +32,22 @@
             <li class="@Html.RouteIf("index", "active")">
                 <a href="@Url.Action("index", "home")" title="Home"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Inicio</span></a>
             </li>
+            @if(isAdmin) {
             <li>
                 <a href="@Url.Action("index", "pacientes")" title="Pacientes"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Pacientes</span></a>
             </li>
+            }            
             <li>
                 <a href="@Url.Action("index", "citas")" title="Citas"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Citas</span></a>
+            </li>
+            <li>
+                
             </li>
         </ul>
     </nav>
     <span class="minifyme" data-action="minifyMenu">
         <i class="fa fa-arrow-circle-left hit"></i>
     </span>
-
+    
 </aside>
 <!-- END NAVIGATION -->
