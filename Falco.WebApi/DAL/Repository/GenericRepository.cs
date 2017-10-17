@@ -9,12 +9,11 @@ namespace Falco.WebApi.DAL.Repository
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        protected ContextModel _entities;
+        protected ContextModel _entities = new ContextModel();
         protected readonly IDbSet<T> _dbset;
 
-        public GenericRepository(ContextModel context)
-        {
-            _entities = context;
+        public GenericRepository()
+        {            
             _dbset = _entities.Set<T>();
         }
 

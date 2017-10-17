@@ -1,5 +1,4 @@
-﻿using Falco.WebApi.DAL;
-using Falco.WebApi.DAL.Repository;
+﻿using Falco.WebApi.DAL.Repository;
 using Falco.WebApi.Models;
 using System;
 using System.Collections;
@@ -11,20 +10,21 @@ using System.Web.Http;
 
 namespace Falco.WebApi.Controllers
 {
-    public class PacienteController : ApiController
+    public class CitaController : ApiController
     {
-        IGenericRepository<Paciente> _PacienteRepository;
+        
+        IGenericRepository<Cita> _CitaRepository;
 
         //use DI by unity
-        public PacienteController(IGenericRepository<Paciente> PacienteRepository)
+        public CitaController(IGenericRepository<Cita> CitaRepository)
         {
-            this._PacienteRepository = PacienteRepository;
+            this._CitaRepository = CitaRepository;
         }
 
         [HttpGet]
         public IEnumerable GetAll()
         {
-            var temp = _PacienteRepository.GetAll();
+            var temp = _CitaRepository.GetAll();
             return temp;
         }
     }

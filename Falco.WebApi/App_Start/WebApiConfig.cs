@@ -16,6 +16,8 @@ namespace Falco.WebApi
             // Rutas de API web
             config.MapHttpAttributeRoutes();
 
+            UnityConfig.RegisterComponents();
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",

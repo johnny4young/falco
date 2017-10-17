@@ -9,8 +9,8 @@ namespace Falco.WebApi.DAL.Repository
 {
     public class TipoCitaRepository : GenericRepository<TipoCita>
     {
-        public TipoCitaRepository(ContextModel context)
-           : base(context)
+        public TipoCitaRepository()
+           : base()
        {
 
         }
