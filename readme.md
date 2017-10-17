@@ -14,9 +14,8 @@ role user :
     user: user@email.com
     password: demo
     
-
-demo online: [site demo online](http://clinicafalco.azurewebsites.net)
-
+demo online: [site demo online](http://clinicafalco.azurewebsites.net)  
+**note: just work UI and Autentication and Authorization, don't test CRUD operations**
 
 
 **Note:** If you get the error stated above on the first time you run the Solution, by simply enabling Nuget package manager to download those packages, you can run the project smoothly. 
