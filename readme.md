@@ -3,6 +3,7 @@
 The App has two Roles: "Admin" and "User".
 
 **Only Admin Role can access to "paciente" view.**
+
 login by default:
 
 role admin :   
@@ -14,7 +15,7 @@ role user :
     password: demo
     
 
-demo online: clinicafalco.azurewebsites.net
+demo online: [url]clinicafalco.azurewebsites.net[/url]
 
 
 
