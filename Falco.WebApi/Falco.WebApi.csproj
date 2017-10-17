@@ -191,6 +191,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\CitaController.cs" />
     <Compile Include="Controllers\PacienteController.cs" />
+    <Compile Include="DAL\BL\CitasBL.cs" />
     <Compile Include="DAL\Repository\CitaRepository.cs" />
     <Compile Include="DAL\Repository\IGenericRepository.cs" />
     <Compile Include="DAL\Repository\PacienteRepository.cs" />
