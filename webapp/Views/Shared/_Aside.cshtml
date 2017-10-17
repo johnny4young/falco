@@ -19,7 +19,13 @@
 
         <ul>
             <li class="@Html.RouteIf("index", "active")">
-                <a href="@Url.Action("index", "home")" title="Dashboard"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Dashboard</span></a>
+                <a href="@Url.Action("index", "home")" title="Home"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Inicio</span></a>
+            </li>
+            <li>
+                <a href="@Url.Action("index", "pacientes")" title="Pacientes"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Pacientes</span></a>
+            </li>
+            <li>
+                <a href="@Url.Action("index", "citas")" title="Citas"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Citas</span></a>
             </li>
         </ul>
     </nav>
