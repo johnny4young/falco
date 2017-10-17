@@ -1,5 +1,23 @@
 ## Falco with MVC5 
 
+The App has two Roles: "Admin" and "User".
+
+**Only Admin Role can access to "paciente" view.
+
+login by default:
+
+role admin :   
+    user: admin@email.com
+    password: demo
+    
+role user : 
+    user: user@email.com
+    password: demo
+    
+
+demo online: clinicafalco.azurewebsites.net
+
+
 
 **Note:** If you get the error stated above on the first time you run the Solution, by simply enabling Nuget package manager to download those packages, you can run the project smoothly. 
 
