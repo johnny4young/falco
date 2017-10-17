@@ -43,6 +43,7 @@ namespace FalcoMvc.Controllers
         public ActionResult Create()
         {
             ViewBag.TipoCitaId = new SelectList(db.TipoCita, "Id", "Descripcion");
+            ViewBag.PacientId = new SelectList(db.Paciente, "Id", "Nombre");
             return View();
         }
 
